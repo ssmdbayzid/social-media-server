@@ -3,7 +3,7 @@ const app = express()
 const port = process.env.PORT || 5000
 const cors = require("cors")
 const bodyParser = require("body-parser");
-const connectDB = require("./config/connectDB");
+// const connectDB = require("./config/connectDB");
 const mediaRoute = require("./routes/mediaRoute");
 const commentRoute = require("./routes/commentRoute");
 require("dotenv").config()
@@ -32,5 +32,5 @@ app.get("/", (req, res)=> {
 
 app.listen(port, ()=> {
     console.log(`Server error running with, ${port}`)
-    connectDB()
+    // connectDB()
 })
