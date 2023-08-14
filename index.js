@@ -5,6 +5,7 @@ const cors = require("cors")
 const bodyParser = require("body-parser");
 const connectDB = require("./config/connectDB");
 const mediaRoute = require("./routes/mediaRoute");
+const commentRoute = require("./routes/commentRoute");
 require("dotenv").config()
 
 
@@ -22,6 +23,7 @@ app.use(cors())
 app.use("/media", mediaRoute)
 // app.use("/products", productRoute)
 // app.use("/orders", orderRoute)
+app.use("/comments", commentRoute)
 
 
 app.get("/", (req, res)=> {
