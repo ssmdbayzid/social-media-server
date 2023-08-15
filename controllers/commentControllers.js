@@ -4,6 +4,8 @@ exports.postComment = async (req, res)=>{
     
     try {
     const id = req.params.id
+        const comments = req.body;
+    console.log(comments)
 
     const { commenterName, commenterImage, comment } = req.body;
 
